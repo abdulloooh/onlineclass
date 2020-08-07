@@ -3,23 +3,17 @@
   src: url(./fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
 }
 
-html {
-  height: 100%;
-}
-
 body {
   background-color: rgb(204, 204, 204, 0.2);
   font-family: my_font !important;
   font-size: 100%;
   margin: auto;
   margin-top: 20px;
-  min-height: 80%;
 }
 
 main {
   margin-left: 20px;
   margin-top: 100px;
-  height: 100%;
 }
 
 .footer {
@@ -30,4 +24,9 @@ main {
 
 footer {
   margin-left: 20px;
+}
+
+#navTop {
+  font-style: italic;
+  text-decoration: underline;
 }

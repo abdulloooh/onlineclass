@@ -1,0 +1,3 @@
+-If I do not later use jquery, remove it from code and from asset
+-Remove all redundancies in other files relating with nav
+-Meta tags
