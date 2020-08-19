@@ -1,25 +1,7 @@
+<?php require "top.php"?>
 
-<?php
-require "fetch.php";
-?>
-<script>
-  const modules = (<?=getModules();?>)
-  let from = `<?=$_GET['from'];?>`
-  let topLevel
-  let midLevel
-  [topLevel , midLevel, fileLevel] = from.split("?")
-  const lesson_modules = modules[topLevel][midLevel]
-  const fileLinks= [`./modules/${topLevel}/${midLevel}/${fileLevel}.pdf`, `./modules/${topLevel}/${midLevel}/${fileLevel}.mp4`]
-</script>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <style>
+<!-- <style>
       @media(max-width:760px){
         video{
         width:100%;
@@ -30,15 +12,34 @@ require "fetch.php";
           /* height:400px; */
         }
       }
-    </style>
-  </head>
-  <body>
-    <div id="navTop"></div>
-    <h3 id="classHeading"></h3>
+  </style> -->
 
-    <div id="top"></div>
+<main role="main">
 
-    <script>
+  <div>
+    <span id="navTop"><a href="/">Channels</a></span>
+    >
+    <span id="classHeading"></span>
+  </div>
+
+  <ul id="top"></ul>
+
+</main>
+
+
+<script>
+  const modules = (<?=getModules();?>)
+  let from = `<?=$_GET['from'];?>`
+  let topLevel
+  let midLevel
+  [topLevel , midLevel, fileLevel] = from.split("?")
+  const lesson_modules = modules[topLevel][midLevel]
+  const fileLinks= [`./modules/${topLevel}/${midLevel}/${fileLevel}.pdf`, `./modules/${topLevel}/${midLevel}/${fileLevel}.mp4`]
+</script>
+
+
+
+<script>
       let doc = document.getElementById("top");
 
         doc.innerHTML +=
@@ -53,11 +54,12 @@ require "fetch.php";
         `
 
       let navigation = document.getElementById("navTop")
-      navigation.innerHTML = `<a href="/">Channels</a>/<a href="/sub.php?from=${topLevel}">${topLevel}</a><a href="/lessons.php?from=${topLevel}?${midLevel}">${midLevel}</a>`
+      navigation.innerHTML = `<a href="/">Channels</a> \> <a href="/sub.php?from=${topLevel}">${topLevel}</a> \> <a href="/lessons.php?from=${topLevel}?${midLevel}">${midLevel}</a>`
 
 
       let heading = document.getElementById("classHeading")
       heading.innerHTML = `${fileLevel}`
-    </script>
-  </body>
-</html>
+</script>
+
+
+<?php require "bottom.php"?>

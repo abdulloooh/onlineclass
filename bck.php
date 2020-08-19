@@ -1,5 +1,3 @@
-<?php include 'fetch.php';?>
-
 <!DOCTYPE html>
 <html lang = 'en'>
 <head>
@@ -10,23 +8,95 @@
 <link rel = 'stylesheet' href = './assets/main.css' />
 </head>
 
+
+
+
 <body>
-<div class = 'container'>
-  <?php $dir = "";?>
-  <div id=<?=$dir;?> class="row">
-    <?php foreach ($classTree as $key => $value): ?>
-        <?php $dir .= $key;?>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title"></div>
-              <div class="card-text">
-                <h3><?=$key;?></h3>
-              </div>
-          </div>
+<div class="row">
+
+  <div class="col-lg-3 col-sm-12">
+    <div class="card">
+        <img src="./assets/images/rock.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Agricaultural Economics and Finance.</p>
         </div>
-    <?php endforeach;?>
+    </div>
   </div>
+
+  <div class="col-lg-3 col-sm-12">
+    <div class="card">
+        <img src="./assets/images/rock.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">OGUN DIGI CLASS SECONDARY COMPUTER STUDIES INTRO TO PROGRAMMING BY OLALEKAN ADEEKO_x264-00.00.26.872-00.25.23.173</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-sm-12">
+    <div class="card">
+        <img src="./assets/images/rock.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Agricaultural Economics and Finance.</p>
+        </div>
+    </div>
+  </div>
+
+
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div> -->

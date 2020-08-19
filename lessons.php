@@ -1,6 +1,18 @@
-<?php
-require "fetch.php";
-?>
+<?php require "top.php"?>
+
+
+<main role="main">
+  <div>
+    <span id="navTop"></span>
+    >
+    <span id="classHeading"></span>
+
+  </div>
+
+  <ul id="top"></ul>
+</main>
+
+
 <script>
   const modules = (<?=getModules();?>)
   let from = `<?=$_GET['from'];?>`
@@ -19,31 +31,20 @@ require "fetch.php";
 
 </script>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="navTop"></div>
-    <h3 id="classHeading"></h3>
 
-    <ul id="top"></ul>
-
-    <script>
+<script>
       let doc = document.getElementById("top");
       lesson_names.forEach((el) => {
         doc.innerHTML += `<li><a href="/load.php?from=${from}?${el}">${el}</a>  </li>`;
       });
 
       let navigation = document.getElementById("navTop")
-      navigation.innerHTML = `<a href="/">Channels</a>/<a href="/sub.php?from=${topLevel}">${topLevel}</a>`
+      navigation.innerHTML = `<a href="/">Channels</a> \> <a href="/sub.php?from=${topLevel}">${topLevel}</a>`
 
 
       let heading = document.getElementById("classHeading")
       heading.innerHTML = `${midLevel}`
-    </script>
-  </body>
-</html>
+</script>
+
+
+<?php require "bottom.php"?>
