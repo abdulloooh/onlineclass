@@ -1,3 +1,7 @@
-modules/
+# modules/
 digiclassTree.txt
 tree.txt
+
+modules/Secondary/
+# modules/Primary/English/*.mp4
+# modules/Primary/Maths/*.mp4
