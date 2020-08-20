@@ -14,15 +14,15 @@
       }
   </style> -->
 
-<main role="main">
+<main role="main" id="player-container">
 
   <div>
     <span id="navTop"><a href="/">Channels</a></span>
-    >
-    <span id="classHeading"></span>
+    <!-- > -->
+    <!-- <span id="classHeading"></span> -->
   </div>
 
-  <ul id="top"></ul>
+  <div id="top" style="padding:0"></div>
 
 </main>
 
@@ -44,21 +44,21 @@
 
         doc.innerHTML +=
         `
-            <video width="380" height="260"  controls poster="rocket.webp">
-                <source src="./modules/${topLevel}/${midLevel}/${fileLevel}.mp4">
+            <video width="700" controls poster="assets/images/r.jpeg" preload="none">
+                <source src="./modules/${topLevel}/${midLevel}/${fileLevel}.mp4" type="video/mp4">
 
-                Your browser does not support the video tag.
+                Sorry, your browser doesn't support embedded videos or has it disbaled.
             </video>
             <br><br>
-            <a href="./modules/${topLevel}/${midLevel}/${fileLevel}.pdf">${fileLevel}.pdf</a>
+            <div id="pdf"><a href="./modules/${topLevel}/${midLevel}/${fileLevel}.pdf">${fileLevel}.pdf</a></div>
         `
 
       let navigation = document.getElementById("navTop")
       navigation.innerHTML = `<a href="/">Channels</a> \> <a href="/sub.php?from=${topLevel}">${topLevel}</a> \> <a href="/lessons.php?from=${topLevel}?${midLevel}">${midLevel}</a>`
 
 
-      let heading = document.getElementById("classHeading")
-      heading.innerHTML = `${fileLevel}`
+      // let heading = document.getElementById("classHeading")
+      // heading.innerHTML = `${fileLevel}`
 </script>
 
 

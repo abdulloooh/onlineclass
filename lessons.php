@@ -1,15 +1,15 @@
 <?php require "top.php"?>
 
 
-<main role="main">
-  <div>
+<main role="main" style="text-align:center">
+  <div style="margin-bottom:20px">
     <span id="navTop"></span>
     >
     <span id="classHeading"></span>
 
   </div>
 
-  <ul id="top"></ul>
+  <div class="row" id="top" style="justify-content:center"></div>
 </main>
 
 
@@ -35,7 +35,17 @@
 <script>
       let doc = document.getElementById("top");
       lesson_names.forEach((el) => {
-        doc.innerHTML += `<li><a href="/load.php?from=${from}?${el}">${el}</a>  </li>`;
+        doc.innerHTML += `
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <a href="/load.php?from=${from}?${el}">
+          <div class="card">
+            <img src="./assets/images/rock.jpeg" class="card-img-top" alt="rocket image">
+            <div class="card-body">
+              <p class="card-text">${el}</p>
+          </div>
+          </a>
+        </div>
+        `;
       });
 
       let navigation = document.getElementById("navTop")
@@ -47,4 +57,3 @@
 </script>
 
 
-<?php require "bottom.php"?>

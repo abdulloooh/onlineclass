@@ -19,7 +19,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <a href="/sub.php?from=${el}">
           <div class="card">
-            <img src="./assets/images/rock.jpeg" class="card-img-top" alt="...">
+            <img src="./assets/images/rock.jpeg" class="card-img-top" alt="rocket image">
             <div class="card-body">
               <p class="card-text">${el}</p>
             </div>
